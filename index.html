@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* common starter CSS */
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'helvetica neue', sans-serif;
+        }
+
+        section{
+            padding: 96px 5vw;
+            background-color: #00469c;
+            color: white;
+        }
+
+        .container{
+            width: 14%;
+            margin: 0 auto;
+            padding: 4px;
+            border: 1px solid white;
+        }
+
+        img{
+            width: 100%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            display: block;
+        }
+
+        .box{
+            width:100%;
+            aspect-ratio: 3/4;
+            background-color: #ec008c;
+
+        }
+
+        /* relative position */
+
+        .relative-1{
+            position: relative;
+            top: 10vw;
+            left: -60%;
+        }
+
+        .relative-2{
+            position: relative;
+            top: -10vw;
+            left: 60%;
+        }
+
+
+        /* absolute position */
+
+        .container-relative{
+            position: relative;
+            margin: 15% auto;
+        }
+
+        .absolute-1{
+            position:absolute;
+            top:-50%;
+            left: -40%;
+            /* width:70%; */
+            z-index: 2;
+        }
+
+        .absolute-2{
+            position:absolute;
+            top:60%;
+            right: -40%;
+            /* width:70%; */
+        }
+        
+        .absolute-3{
+            position:relative;
+            z-index: 1;
+        }
+
+        /* fixed position */
+
+        .fixed{
+            position: fixed;
+            z-index: 100;
+            top: 60%;
+            left:0;
+            background-color: #ec008c;
+            padding: 0 64px;
+        }
+
+        /* sticky position */
+        .flex{
+            display: flex;
+            width: 100%;
+            border: none;
+        }
+        .flex > div{
+            width:50%;
+        }
+        .flex > div > img{
+            width:100%;
+            height:auto;
+            aspect-ratio: 16/9;
+        }
+        .col-1{
+            display: flex;
+            flex-direction: column;
+            gap: 30vw;
+            padding: 100vh 0 30vw 0;
+        }
+
+        .sticky{
+            position: sticky;
+            top: 30%;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+
+
+
+
+        
+
+    </style>
+</head>
+<body>
+    <!-- default element postion, static -->
+    <section>
+        <h2>static</h2>
+        <div class="container">
+            <img src="images/miles-1.webp">
+            <div class="box"></div>
+            <img src="images/peter.webp">
+        </div>
+    </section>
+
+    <!-- postion, relative -->
+    <section>
+        <h2>relative</h2>
+        <div class="container ">
+            <img src="images/miles-1.webp" class="relative-1">
+            <div class="box"></div>
+            <img src="images/peter.webp" class="relative-2">
+        </div>
+    </section>
+
+    <!-- postion, absolute -->
+    <section>
+        <h2>absolute</h2>
+        <div class="container container-relative">
+            <img src="images/miles-1.webp" class="absolute-1">
+            <div class="box absolute-3"></div>
+            <img src="images/peter.webp" class="absolute-2">
+        </div>
+    </section>
+
+    <!-- postion, fixed -->
+    <section class="fixed">
+        <h2>fixed banner</h2>
+    </section>
+
+    <!-- postion, sticky -->
+    <section>
+        <h2>sticky</h2>
+        <div class="container flex">
+            <div class="col-1">
+                <img src="images/miles-2.jpg">
+                <img src="images/gwen.jpg">
+                <img src="images/profile.jpeg">
+            </div>
+            <div >
+                <div class="sticky">
+                    <h2>Sticky<br> Stuff</h2>
+                    <P>What is that feeling when you're driving away from people and they recede on the plain till you see their specks dispersing? - it's the too-huge world vaulting us, and it's good-bye. But we lean forward to the next crazy venture beneath the skies.</P>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section style="padding:96px 0 0 0;">
+                <img src="images/spider-hero.jpg" style="height: auto; aspect-ratio: auto;">
+    </section>
+
+
+    
+</body>
+</html>
